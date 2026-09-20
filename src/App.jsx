@@ -7,7 +7,7 @@ import About from './components/About'
 import Prouduct from './components/Prouduct'
 import Contact from './components/Contact'
 import Blogs from './components/Blogs'
-import {createBrowserRouter, RouterProvider} from "react-router-dom"
+import { createHashRouter, RouterProvider } from "react-router-dom"
 import NotFounded from './errors/NotFounded'
 import ChildOne from './components/ChiledPath/ChildOne'
 import ChildTwo from './components/ChiledPath/ChildTwo'
@@ -30,7 +30,7 @@ export default function App() {
 
 
 
-  const routing = createBrowserRouter([
+  const routing = createHashRouter([
     { path: "/login", element: userData ? <Navigate to="/home" replace /> : <Auth mode="login" /> },
     { path: "/register", element: userData ? <Navigate to="/home" replace /> : <Auth mode="register" /> },
     {
@@ -54,9 +54,7 @@ export default function App() {
 
      ]
     }
-  ], {
-    basename: import.meta.env.PROD ? "/project" : "/",
-  })
+  ])
 
 
 
