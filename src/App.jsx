@@ -54,7 +54,9 @@ export default function App() {
 
      ]
     }
-  ])
+  ], {
+    basename: import.meta.env.PROD ? "/project" : "/",
+  })
 
 
 
