@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      const projectRoot = "/project/";
+      const requestedPath = window.location.pathname.startsWith(projectRoot)
+        ? window.location.pathname.slice(projectRoot.length)
+        : "";
+      window.location.replace(`${projectRoot}#/${requestedPath}${window.location.search}`);
+    </script>
+  </head>
+  <body></body>
+</html>
