@@ -37,7 +37,7 @@ export default function App() {
       path:"/", 
     element:<Layout />,
       children:[   
-          {index: true, element:<Navigate to="/home" replace />},
+          {index: true, element:<Home/>},
           {path:'home' , element:<Home/>},
           {path:'about',element:<About/>},
           {path:'blogs',element:<Blogs/>},
